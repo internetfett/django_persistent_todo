@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django_persistent_todo',
     'example',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
