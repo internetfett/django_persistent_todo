@@ -2,6 +2,7 @@
 *.log
 *.pot
 *.pyc
+example.db
 local_settings.py
 migrations/
 
