@@ -1,3 +1,12 @@
 {% for item in items %}
     {{ item }}<br/>
 {% endfor %}
+<form action="{% url 'add' %}" method="POST">{% csrf_token %}
+    {{ form.non_field_errors }}
+    {% if form.text.errors %}
+        {{ form.text.errors }}
+    {% endif %}
+    {{ form.text }}
+    {{ form.list_id.as_hidden }}
+    <button type="submit">Add Item</button>
+</form>
