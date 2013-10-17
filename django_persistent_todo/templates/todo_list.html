@@ -1,5 +1,5 @@
 {% for item in items %}
-    {{ item }}<br/>
+    {{ item }} <a href="{% url 'delete' item.id %}">x</a><br/>
 {% endfor %}
 <form action="{% url 'add' %}" method="POST">{% csrf_token %}
     {{ form.non_field_errors }}
